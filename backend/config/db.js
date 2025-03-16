@@ -9,8 +9,6 @@ const connectDB = async () => {
     });
     
     console.log(`MongoDB connecté: ${conn.connection.host}`);
-    
-    // Vérifier si un document de jeu existe déjà, sinon en créer un
     const Game = require('../models/game');
     const gameExists = await Game.exists({});
     
